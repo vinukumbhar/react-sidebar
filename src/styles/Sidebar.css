@@ -1,6 +1,5 @@
 /* Google Font Import - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
 :root {
     /* Colors */
     --body-color: #E4E9F7;
@@ -331,4 +330,71 @@ body.dark .switch::before {
 
 body.dark .home .text {
     color: var(--text-color);
+}
+
+/* Styles for the submenu */
+/* .submenu {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+  }
+  .submenu .subnav-link {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+  }
+  
+  .submenu .subnav-link:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .submenu .subnav-link .icon {
+    margin-right: 10px;
+  }
+  
+  .submenu .subnav-link .subnav-text {
+    font-size: 14px;
+  }
+  
+  .d-block {
+    display: block;
+    left: 0;
+  } */
+  .sidebar li {
+    height: 50px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    position: relative; /* Add this line to make the li element a reference for submenu positioning */
+}
+.submenu {
+    position: absolute;
+    top: 100%; /* Position the submenu below its parent */
+    left: 0;
+    z-index: 1;
+}
+
+/* New styles for the caret icons */
+.caret-icon {
+    font-size: 20px;
+    margin-left: auto; /* Push the caret to the right */
+    transition: transform 0.3s ease;
+    transition: var(--tran-03);
+}
+
+.nav-link:hover .bx-chevron-right::before {
+    color: var(--text-color);
+}
+
+.submenu-open .caret-icon {
+    transform: rotate(90deg); /* Rotate the caret when submenu is open */
+}
+
+/* Adjust padding for submenu parent links */
+.sidebar li.nav-link {
+    /* ... */
+    padding-right: 30px; /* Add some padding for the caret icon */
 }
