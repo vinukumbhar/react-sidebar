@@ -50,3 +50,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.mobile-sidb {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .main-sideb {
+    display: none; /* Hide main sidebar on mobile */
+  }
+
+  .mobile-sideb {
+    display: block; /* Show mobile sidebar on mobile */
+    /* Add specific styles for mobile sidebar here */
+  }
+}

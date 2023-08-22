@@ -1,4 +1,4 @@
-import {React, useState, useRef} from 'react';
+import {React, useState} from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import Sidebar from './components/Sidebar'
@@ -8,18 +8,16 @@ import MobileSidebar from './components/MobileSidebar';
 
 const Routed = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const width = useRef(window.innerWidth);
   return (
       <BrowserRouter>
         <div className='row'>
           <div className='col-2'>
-            {
-              width.current > 700 ? (
-                <Sidebar state={{sidebarOpen, setSidebarOpen}}/>
-              ) : (
-                <MobileSidebar/>
-              )
-            }
+            <div className='main-sideb'>
+            <Sidebar state={{sidebarOpen, setSidebarOpen}}/>
+            </div>
+            <div className='mobile-sideb'>
+            <MobileSidebar/>
+            </div>
           </div>
           <div className='col-9'>
             <Routes>
