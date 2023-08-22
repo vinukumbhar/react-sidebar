@@ -44,6 +44,10 @@ body.dark {
     --text-color: #ccc;
 }
 
+.subnav-link, .nav-link {
+    cursor: pointer;
+}
+
 /* Sidebar */
 .sidebar {
     position: fixed;
@@ -55,6 +59,10 @@ body.dark {
     background: var(--sidebar-color);
     transition: var(--tran-05);
     z-index: 100;
+}
+
+.header.new {
+    border: none;
 }
 
 .sidebar.close {

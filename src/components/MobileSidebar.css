@@ -1,0 +1,87 @@
+:root {
+    /* Colors */
+    --body-color: #E4E9F7;
+    --sidebar-color: #FFF;
+    --primary-color: #695CFE;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #707070;
+
+    /* Transition */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+/* Mobile Sidebar */
+.mobile-sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Initially hide the sidebar */
+    width: 90%;
+    height: 100%;
+    background-color: var(--sidebar-color);
+    transition: left 0.3s ease;
+    z-index: 100;
+}
+
+.mobile-sidebar.open {
+    left: 0; /* Show the sidebar when open */
+    transition: left 0.3s ease;
+}
+
+.mobile-sidebar header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: var(--primary-color-light);
+}
+
+.mobile-sidebar .logo img {
+    width: 40px;
+    border-radius: 6px;
+}
+
+.mobile-sidebar .toggle {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ... Existing styles ... */
+
+
+/* Apply styles to open submenus */
+.sidebar-content ul.open {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.menu, .menu-bar {
+    margin-top: 0!important;
+}
+.header.new {
+    float: right;
+}
+
+.in {
+    display: block;
+    width: 100%;
+    height: 40px;
+}
+
+/* Mobile Sidebar */
+.mobile-sidebar {
+    /* ... Other styles ... */
+    left: -100%; /* Initially hide the sidebar */
+    transition: left 0.3s ease; /* Add a transition property */
+    /* ... Other styles ... */
+}
+
+.mobile-sidebar.open {
+    left: 0; /* Show the sidebar when open */
+    transition: left 0.3s ease; /* Add a transition property */
+    /* ... Other styles ... */
+}
